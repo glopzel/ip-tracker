@@ -32,7 +32,7 @@ body {
 .info-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    min-width: 70%;
+    max-width: 70%;
     background: white;
     border-radius: 10px;
     box-shadow: 2px 15px 35px hsla(0, 0%, 60%, 0.5);
@@ -41,6 +41,9 @@ body {
 }
 
 .info-container > * {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 20px 0;
     padding: 0 20px;
 }
