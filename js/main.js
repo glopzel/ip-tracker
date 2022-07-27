@@ -28,13 +28,17 @@ async function fetchIP() {
     let timezone = data.location.timezone
     let isp = data.isp
 
+    let latlng = L.latLng(data.location.lat, data.location.lng);
+    mapIt(latlng)
+
     displayResults(ip, location, timezone, isp)
 }
 
-function mapIt() {
+function mapIt(ltlg) {
     // `https://geo.ipify.org/api/v2/country?apiKey=at_A1VUU3MAyiYPp0YA4IuDM9MCGVclA&ipAddress=${ip}`
     // old link https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
-    let map = L.map('map').setView([51.505, -0.09], 13);
+    // let map = L.map('map').setView([51.505, -0.09], 13);
+    let map = L.map('map').setView(ltlg, 13)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
