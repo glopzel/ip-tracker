@@ -55,10 +55,6 @@ body {
 /* MAPITA */
 
 #map {
-    /* position: absolute;
-    bottom: 0; */
-    border:1px solid red; 
-    /* width: 100vw; */
     height: 70vh; 
     z-index: 1;
 }
