@@ -32,7 +32,7 @@ body {
 .info-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 70%;
+    width: 70%;
     background: white;
     border-radius: 10px;
     box-shadow: 2px 15px 35px hsla(0, 0%, 60%, 0.5);
