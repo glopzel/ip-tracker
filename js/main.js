@@ -10,6 +10,8 @@ const displayISP = document.querySelector('#isp');
 
 btn.addEventListener('click', fetchIP)
 
+let map;
+
 async function fetchIP() {
     // if you get the value outside of this function on a global scope (at the top, right away on page load), you will get undefined, not the value
     let ipTest = inputIP.value
@@ -33,7 +35,11 @@ async function fetchIP() {
 }
 
 function mapIt(ltlg) {
-    let map = L.map('map').setView(ltlg, 13)
+    if (map) {
+        map.off();
+        map.remove();
+    }
+    map = L.map('map').setView(ltlg, 13)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
