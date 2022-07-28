@@ -38,6 +38,7 @@ function mapIt(ltlg) {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
     }).addTo(map);
+    let marker = L.marker(ltlg).addTo(map);
 }
 
 function displayResults(ip, loc, timez, isp) {
