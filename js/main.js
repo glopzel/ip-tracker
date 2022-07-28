@@ -35,8 +35,8 @@ async function fetchIP() {
     } else {
         ipTest = startIP
     }
-
-    const apiK = 'at_A1VUU3MAyiYPp0YA4IuDM9MCGVclA'
+    
+    const apiK = 'at_UtW2ct8oP2PVku8BMGGgy5JqnpB59'
     let connectionUrl = `https://geo.ipify.org/api/v1?apiKey=${apiK}&ipAddress=${ipTest}`
     
     const results = await fetch(connectionUrl);
