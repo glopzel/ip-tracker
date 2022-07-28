@@ -25,6 +25,10 @@ body {
     top: 50px;
 }
 
+#main-container > * {
+    margin-top: 40px;
+}
+
 /* WHITE PART WITH THE RESULTS */
 
 .info-container {
@@ -61,7 +65,7 @@ body {
 
 h1 {
     color: white;
-    margin-top: 0;
+    margin: 0;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -123,6 +127,7 @@ button:hover {
        display: block;
        text-align: center;
        width: 80%;
+       margin-top: 20px;
    } 
 
    .bd-gr {
