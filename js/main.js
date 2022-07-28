@@ -62,7 +62,7 @@ function mapIt(ltlg) {
     }).addTo(map);
 
     let markerIcon = L.icon({
-		iconUrl: './images/icon-location.svg',
+		iconUrl: 'https://ik.imagekit.io/a8p7pl7hs/sites/icon-location_Q89yew-aI.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1658977365893',
 	})
 
     let marker = L.marker(ltlg, {icon: markerIcon}).addTo(map);
