@@ -8,15 +8,36 @@ const displayLocation = document.querySelector('#location');
 const displayTime = document.querySelector('#time')
 const displayISP = document.querySelector('#isp');
 
+let map, startIP;
+
+window.addEventListener('load', (event) => {
+    testUserIP()
+});
+
 btn.addEventListener('click', fetchIP)
 
-let map;
+async function testUserIP() {
+    if (!startIP) {
+        let makeFetchHappen = await fetch('https://api.ipify.org/?format=json')
+        let result = await makeFetchHappen.json()
+        startIP = result.ip
+        fetchIP(startIP)
+    } else {
+        console.log('move on from this ip you creep')
+    }
+}
 
 async function fetchIP() {
     // if you get the value outside of this function on a global scope (at the top, right away on page load), you will get undefined, not the value
-    let ipTest = inputIP.value
+    let ipTest;
+    if (inputIP.value) {
+        ipTest = inputIP.value
+    } else {
+        ipTest = startIP
+    }
 
-    let connectionUrl = `https://geo.ipify.org/api/v1?apiKey=at_A1VUU3MAyiYPp0YA4IuDM9MCGVclA&ipAddress=${ipTest}`
+    const apiK = 'at_A1VUU3MAyiYPp0YA4IuDM9MCGVclA'
+    let connectionUrl = `https://geo.ipify.org/api/v1?apiKey=${apiK}&ipAddress=${ipTest}`
     
     const results = await fetch(connectionUrl);
     const data = await results.json()
@@ -39,7 +60,12 @@ function mapIt(ltlg) {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
     }).addTo(map);
-    let marker = L.marker(ltlg).addTo(map);
+
+    let markerIcon = L.icon({
+		iconUrl: './images/icon-location.svg',
+	})
+
+    let marker = L.marker(ltlg, {icon: markerIcon}).addTo(map);
 }
 
 function displayResults(data) {
@@ -54,6 +80,7 @@ function displayResults(data) {
     displayTime.innerText = timezone
     displayISP.innerText = isp
 }
+
 
 
 
