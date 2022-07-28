@@ -21,17 +21,12 @@ async function fetchIP() {
     const results = await fetch(connectionUrl);
     const data = await results.json()
 
-    // info to display
-    let ip = data.ip;
-    let location = `${data.location.city}, ${data.location.region}, ${data.location.postalCode}`
-    let timezone = data.location.timezone
-    let isp = data.isp
-
     // coordinates for the map
     let latlng = L.latLng(data.location.lat, data.location.lng);
+
     mapIt(latlng)
 
-    displayResults(ip, location, timezone, isp)
+    displayResults(data)
 }
 
 function mapIt(ltlg) {
@@ -47,10 +42,16 @@ function mapIt(ltlg) {
     let marker = L.marker(ltlg).addTo(map);
 }
 
-function displayResults(ip, loc, timez, isp) {
+function displayResults(data) {
+    // get info to display from the data
+    let ip = data.ip;
+    let location = `${data.location.city}, ${data.location.region}, ${data.location.postalCode}`
+    let timezone = data.location.timezone
+    let isp = data.isp
+
     displayIP.innerText = ip
-    displayLocation.innerText = loc
-    displayTime.innerText = timez
+    displayLocation.innerText = location
+    displayTime.innerText = timezone
     displayISP.innerText = isp
 }
 
