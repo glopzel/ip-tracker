@@ -30,6 +30,7 @@ async function testUserIP() {
 async function fetchIP() {
     // if you get the value outside of this function on a global scope (at the top, right away on page load), you will get undefined, not the value
     let ipTest;
+    
     if (inputIP.value) {
         ipTest = inputIP.value
     } else {

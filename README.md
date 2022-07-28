@@ -27,8 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-![phone preview of ip tracker site, block of blue with the map on the bottom](https://ik.imagekit.io/a8p7pl7hs/git-previews/ip-tracker-shot-phone_GH93zp1jb.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1658968643835)
+#### Desktop
+![](https://ik.imagekit.io/a8p7pl7hs/git-previews/fetched_9Ohy0e9l7.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1658979649197)
+
+#### Phone preview
+![phone preview of ip tracker site, block of blue with the map on the bottom](https://ik.imagekit.io/a8p7pl7hs/git-previews/newwtrackersize_ZF55_PHjG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1658979462342)
 
 
 ### Links
