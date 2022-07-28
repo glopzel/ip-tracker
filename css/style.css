@@ -131,14 +131,14 @@ button:hover {
        margin-top: 20px;
    } 
 
+   .info-container, .input-ip {
+       width: 75%;
+   }
+
    .bd-gr {
         border-right-style: none;
         border-radius: 1px solid hsl(0, 0%, 70%);
     }
-
-   .input-ip {
-       width: 80%;
-   }
 
    .head-start {
        height: 40vh;
