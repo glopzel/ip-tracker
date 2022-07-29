@@ -28,7 +28,7 @@ Users should be able to:
 ### Screenshot
 
 #### Desktop
-<img src="https://ik.imagekit.io/a8p7pl7hs/git-previews/fetched_9Ohy0e9l7.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1658979649197" alt="block of blue at the top of the page with a map on the bottom">
+<img src="https://ik.imagekit.io/a8p7pl7hs/git-previews/fetched_9Ohy0e9l7.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1658979649197" alt="block of blue at the top of the page with a map on the bottom" width="200px">
 
 #### Phone preview
 ![phone preview of ip tracker site, block of blue with the map on the bottom](https://ik.imagekit.io/a8p7pl7hs/git-previews/newwtrackersize_ZF55_PHjG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1658979462342)
